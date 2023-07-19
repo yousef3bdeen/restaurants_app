@@ -17,6 +17,19 @@ class ImageAssets {
   static const String logoutIc = "$imagePath/logout_ic.svg";
   static const String rightArrowSettingsIc =
       "$imagePath/settings_right_arrow_ic.svg";
+
+      // search
+      static const String kfc = "$imagePath/kfc.jpg";
+      static const String burgerKing = "$imagePath/burger_king.jpg";
+      static const String mac = "$imagePath/mac.jpg";
+      static const String pizzaHut = "$imagePath/pizza_hut.jpg";
+      static const String subWay = "$imagePath/subway.jpg";
+      static const String res6 = "$imagePath/res6.jpg";
+      static const String res7 = "$imagePath/res7.jpg";
+      static const String res8 = "$imagePath/res8.jpg";
+      static const String res9 = "$imagePath/res9.jpg";
+      static const String res10 = "$imagePath/res10.jpg";
+      
 }
 
 class JsonAssets {

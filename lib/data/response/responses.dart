@@ -67,7 +67,7 @@ class AuthenticationResponse extends BaseResponse {
   Map<String, dynamic> toJson() => _$AuthenticationResponseToJson(this);
 }
 
-// forgot password
+// ----forgot password
 @JsonSerializable()
 class ForgotPasswordResponse extends BaseResponse {
   @JsonKey(name: 'support')

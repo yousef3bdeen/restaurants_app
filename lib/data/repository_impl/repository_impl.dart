@@ -74,7 +74,7 @@ class RepositoryImpl implements Repository {
     }
   }
 
-  // register
+  // --register
   @override
   Future<Either<Failure, Authentication>> register(
       RegisterRequest registerRequest) async {
@@ -102,6 +102,7 @@ class RepositoryImpl implements Repository {
     }
   }
 
+  // --home
   @override
   Future<Either<Failure, HomeObject>> getHomeData() async {
     try {

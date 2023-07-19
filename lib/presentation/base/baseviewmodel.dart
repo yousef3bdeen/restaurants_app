@@ -1,4 +1,3 @@
-
 import 'dart:async';
 
 import 'package:restaurants_app/presentation/common/state_renderer/state_renderer_impl.dart';
@@ -13,7 +12,8 @@ abstract class BaseViewModel extends BaseViewModelInput
   Sink get inputState => _inputStreamController.sink;
 
   @override
-  Stream<FlowState> get outputState => _inputStreamController.stream.map((flowState) => flowState);
+  Stream<FlowState> get outputState =>
+      _inputStreamController.stream.map((flowState) => flowState);
 
   @override
   void dispose() {
@@ -30,6 +30,5 @@ abstract class BaseViewModelInput {
 }
 
 abstract class BaseViewModelOutput {
-
-  Stream <FlowState> get outputState;
+  Stream<FlowState> get outputState;
 }

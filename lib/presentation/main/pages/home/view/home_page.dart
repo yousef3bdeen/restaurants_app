@@ -412,6 +412,7 @@ class _HomePageState extends State<HomePage> {
                     child: Image.network(
                       stores[index].image,
                       fit: BoxFit.cover,
+                      
                     ),
                   ),
                 );

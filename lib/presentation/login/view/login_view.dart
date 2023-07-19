@@ -25,15 +25,15 @@ class _LoginViewState extends State<LoginView> {
   final AppPreferences _appPreferences = instance<AppPreferences>();
 
   final TextEditingController _userNameController = TextEditingController();
-  final TextEditingController _userPasswordController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
 
   _bind() {
     _viewModel.start(); // tell viewmodel, start ur job
     _userNameController
         .addListener(() => _viewModel.setUserName(_userNameController.text));
-    _userPasswordController.addListener(
-        () => _viewModel.setPassword(_userPasswordController.text));
+    _passwordController
+        .addListener(() => _viewModel.setPassword(_passwordController.text));
 
     _viewModel.isUserLoggedInSuccessfullyStreamController.stream
         .listen((isLoggedIn) {
@@ -82,9 +82,7 @@ class _LoginViewState extends State<LoginView> {
                   // child: Image(image: AssetImage(ImageAssets.splashLogo)),
                   child: IconApp(),
                 ),
-                const SizedBox(
-                  height: AppSize.s28,
-                ),
+                const SizedBox(height: AppSize.s28),
                 Padding(
                   padding: const EdgeInsets.only(
                       left: AppPadding.p28, right: AppPadding.p28),
@@ -103,9 +101,7 @@ class _LoginViewState extends State<LoginView> {
                         );
                       }),
                 ),
-                const SizedBox(
-                  height: AppSize.s28,
-                ),
+                const SizedBox(height: AppSize.s28),
                 Padding(
                   padding: const EdgeInsets.only(
                       left: AppPadding.p28, right: AppPadding.p28),
@@ -114,7 +110,7 @@ class _LoginViewState extends State<LoginView> {
                       builder: (context, snapshot) {
                         return TextFormField(
                             keyboardType: TextInputType.visiblePassword,
-                            controller: _userPasswordController,
+                            controller: _passwordController,
                             decoration: InputDecoration(
                               hintText: AppStrings.password.tr(),
                               labelText: AppStrings.password.tr(),
@@ -124,9 +120,7 @@ class _LoginViewState extends State<LoginView> {
                             ));
                       }),
                 ),
-                const SizedBox(
-                  height: AppSize.s28,
-                ),
+                const SizedBox(height: AppSize.s28),
                 Padding(
                   padding: const EdgeInsets.only(
                       left: AppPadding.p28, right: AppPadding.p28),
@@ -142,7 +136,7 @@ class _LoginViewState extends State<LoginView> {
                                       _viewModel.login();
                                     }
                                   : null,
-                              child: Text(AppStrings.login)),
+                              child: const Text(AppStrings.login)),
                         );
                       }),
                 ),
